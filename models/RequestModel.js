@@ -1,7 +1,7 @@
 // models/requestModel.js
 const mongoose = require('mongoose');
 
-const RequestSchema = new mongoose.Schema({
+const requestSchema = new mongoose.Schema({
   requestId: String,
   status: { type: String, default: 'pending' },
   products: [
@@ -15,4 +15,5 @@ const RequestSchema = new mongoose.Schema({
   webhookUrl: String,
 });
 
-module.exports = mongoose.model('Request', RequestSchema);
+const Request = mongoose.model("Request", requestSchema)
+module.exports = Request;

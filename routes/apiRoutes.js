@@ -4,8 +4,8 @@ const router = express.Router();
 const { v4: uuidv4 } = require('uuid');
 const csv = require('csv-parser');
 const fs = require('fs');
-const Request = require('../models/requestModel');
-const { setupSSE, sendSSEEvent } = require('../middleware/sse');
+const Request  = require('../models/requestModel');
+const { setupSSE } = require('../middleware/sse');
 const { processImages } = require('../utils/ImageProcessing');
 
 router.post('/upload', async (req, res) => {
