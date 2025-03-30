@@ -8,6 +8,7 @@ const sharp = require('sharp');
 const axios = require('axios');
 const cors = require('cors');
 const { uploadFileToAwsS3Bucket } = require('./fileUploadService');
+const mongodbConfig = require('./config/mongodbConfig');
 
 const app = express();
 const PORT = 3000;
@@ -20,7 +21,7 @@ app.use(fileUpload({ useTempFiles: true, tempFileDir: '/tmp/' }));
 app.use(express.json());
 
 // MongoDB Connection
-mongoose.connect('mongodb+srv://anupyadav20177:Dhaked1214@cluster0.uveegn6.mongodb.net/image_processor', {
+mongoose.connect(mongodbConfig.mongoDB.baseUrl, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
