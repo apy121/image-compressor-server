@@ -1,0 +1,36 @@
+{
+  "name": "image-compressor-server",
+  "version": "1.0.0",
+  "description": "backend codebase for image compressor",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/apy121/image-compressor-server.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/apy121/image-compressor-server/issues"
+  },
+  "homepage": "https://github.com/apy121/image-compressor-server#readme",
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.777.0",
+    "axios": "^1.8.4",
+    "cors": "^2.8.5",
+    "csv-parser": "^3.2.0",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "express-fileupload": "^1.5.1",
+    "mongoose": "^8.13.1",
+    "sharp": "^0.33.5",
+    "uuid": "^11.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
+}
